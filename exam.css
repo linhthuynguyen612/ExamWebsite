@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.container {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.content {
+    padding: 20px;
+    max-height: 800px;
+    overflow: auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.time {
+    padding: 16px;
+    height: 300px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    color: rgb(39, 38, 38);
+    font-size: 16px;
+    position: fixed;
+    width: 15%;
+    right: 0;
+}
+
+#countdown {
+    font-size: 30px;
+    color: rgb(9, 9, 9);
+    padding: 10px;
+    text-align: flex-start;
+    font-weight: bold;
+
+  }
+
+.btn-submit {
+    font-weight: 500;
+    border: 1px solid #35509a;
+    border-radius: 0.35rem;
+    padding: 0.375rem 0.75rem; 
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 10px;
+    color: #35509a;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #35509a;
+    color: white;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+.question h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.question input[type="radio"],
+.question input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.question textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+

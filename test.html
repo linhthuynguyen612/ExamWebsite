@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTIT Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contain">
+        <!-- <header>
+            <div class="head-left">
+                <div>
+                    <a href="https://portal.ptit.edu.vn/">
+                        <img src ="https://code.ptit.edu.vn/2020/images/logo_ptit.png"  class="logo">
+                    </a>
+                </div>
+                <div class="caption">
+                    <p class="caption2">Học viện công nghệ bưu chính viễn thông</p>
+                </div>
+            </div>
+        </header> -->
+        
+        <div class="container">
+            <form id="user-form">
+                <div class="head-left">
+                    <div>
+                        <a href="https://portal.ptit.edu.vn/">
+                            <img src ="https://code.ptit.edu.vn/2020/images/logo_ptit.png"  class="logo">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <p class="caption1">HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</p>
+                    </div>
+                </div>
+                <label for="fullname">Họ và tên:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br>
+                <label for="dob">Ngày sinh:</label><br>
+                <input type="date" id="dob" name="dob" required><br>
+                <label for="CCCD">CCCD:</label><br>
+                <input type="text" id="CCCD" name="CCCD" required><br>
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" required><br>
+                <input type="submit" value="Vào thi" id="submit">
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        
+        document.getElementById("user-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var fullname = document.getElementById("fullname").value;
+            var dob = document.getElementById("dob").value;
+            var CCCD = document.getElementById("CCCD").value;
+            var address = document.getElementById("address").value;
+            if(fullname == ""){
+                alert("Họ và tên không được để trống");
+                return;
+            }
+            else if (dob == ""){
+                alert("Ngày sinh không được để trống");
+                return;
+            }
+            else if (CCCD == ""){
+                alert("CCCD không được để trống");
+                return;
+            }
+            else if (address == ""){
+                alert("Địa chỉ không được để trống");
+                return;
+            }
+            else {
+                event.preventDefault();
+                window.location.href = "exam.html";
+            }
+            
+        });
+
+        
+        
+    </script>
+    
+</body>
+</html>
