@@ -61,13 +61,14 @@ html {
     line-height: 1.5;
     text-align: center;
     margin-top: 10px;
-    color: #35509a;
+    color: white;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    background-color: #35509a;
     width: 100%;
 }
 
 .btn-submit:hover {
-    background-color: #35509a;
+    background-color: #1541ba;
     color: white;
 }
 

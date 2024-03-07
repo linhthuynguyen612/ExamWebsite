@@ -1,26 +1,8 @@
-var countDownDate = new Date().getTime() + 60 * 60 * 1000; 
-
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("countdown").innerHTML = minutes + ": " + seconds;
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-
 var questions = [
    
     ...Array(10).fill().map((_, i) => ({
       type: 'true-false',
       text: `Bài tập này khó?`,
-      answer: Math.random() < 0.5 ? 'Đúng' : 'Sai'
     })),
   
    
@@ -30,7 +12,6 @@ var questions = [
         type: 'multiple_choice',
         text: `Lorem ipsum dolor sit amet, consectetur adip?`,
         choices: choices,
-        answer: choices[Math.floor(Math.random() * 4)]
     };
   }),
 
@@ -40,14 +21,12 @@ var questions = [
           type: 'multiple_response',
           text: `Bạn thích di du học không`,
           choices: choices,
-          answer: choices[Math.floor(Math.random() * 4)]
       };
   }),
  
     ...Array(10).fill().map((_, i) => ({
         type: 'text_response',
         text: `Sở thích của bạn là gì?`,
-        answer: 'hihihihihi'
     })),
   ];
   
@@ -149,32 +128,9 @@ var questions = [
   
   
 
-  document.getElementById('btn-submit').addEventListener('click', function() {
-    var score = 0;
+document.getElementById('btn-submit').addEventListener('click', function() {
+  alert("Bạn đã hoàn thành khảo sát");
+
   
-    questions.forEach(function(question, index) {
-      if (question.type === 'true-false' || question.type === 'multiple_choice') {
-        var selectedChoice = document.querySelector('input[name="question' + index + '"]:checked');
-        if (selectedChoice && selectedChoice.value === question.answer) {
-          score++;
-        }
-      } else if (question.type === 'multiple_response') {
-        var selectedChoices = document.querySelectorAll('input[name="question' + index + '"]:checked');
-        var correctChoices = question.answer; 
-
-        if (selectedChoices.length === correctChoices.length) {
-            var allCorrect = Array.from(selectedChoices).every(function(selectedChoice) {
-            return correctChoices.includes(selectedChoice.value);
-            });
-
-            if (allCorrect) {
-            score++;
-            }
-        }
-    }
-    });
-    console.log(score);
-    clearInterval(x);
-    alert('Chúc mừng bạn đã hoàn thành bài thi. Điểm của bạn là: ' + score * 0.25 );
-  });
+});
 
