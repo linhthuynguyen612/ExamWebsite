@@ -176,6 +176,5 @@ var questions = [
     console.log(score);
     clearInterval(x);
     alert('Chúc mừng bạn đã hoàn thành bài thi. Điểm của bạn là: ' + score * 0.25 );
-    window.location.href = 'index.html';
   });
 
